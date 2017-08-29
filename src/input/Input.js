@@ -136,11 +136,10 @@ class Input extends Component {
 	}
 
 	render() {
-		React.Children.forEach(this.props.children, child=>console.log(child.props.children.type ? child.props.children.type : child.type));
 		return (
 			<div>
 				{this.props.children}
-				<input value={this.state.value} onKeyDown={(e) => this.changeValue(e)} onChange={(e) => e}/>	
+				<input value={this.state.value} onKeyDown={(e) => this.changeValue(e)} onChange={() =>{ return }}/>	
 			</div>
 		);
 	}
